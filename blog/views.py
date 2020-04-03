@@ -1,8 +1,23 @@
 from django.shortcuts import render
 
-# Create your views here.
-
 from django.http import HttpResponse
+
+
+posts = [
+
+    {
+        'title': 'post1',
+        'content': 'i am from african maldives in south east'
+    },
+    {
+        'title': 'post2',
+        'content': 'i am from turkey'
+    },
+    {
+        'title': 'post3',
+        'content': 'i am running towards east'
+    },
+]
 
 
 def home(request):
@@ -10,4 +25,12 @@ def home(request):
 
 
 def index(request):
-    return render(request, 'blog/index.html')
+
+    context1 = {
+        'posts': posts
+    }
+    return render(request, 'blog/index.html', context1)
+
+
+def about(request):
+    return render(request, 'blog/about.html', {'title': 'about'})

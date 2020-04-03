@@ -1,25 +1,9 @@
 
 
->made virtual env
-mkvirtualenv apr03
-
-
-> installed django
-pip install django
-
 
 >
-django-admin startproject myproject .
+we altered index.html to display  static posts in template
 
 >
-python manage.py runserver
-
->
-python manage.py startapp blog
-
->****
-for rendering url path ,u dont need to add app in installed apps
-
->****
-if u add ur app in installed-apps ur templates work !
+used about page to show 'title' functionality in template
 

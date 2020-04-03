@@ -7,5 +7,12 @@
   </head>
   <body>
     <h2>_001_djproject</h2>
+
+    {% for post in posts %}
+
+    <h1>{{post.title}}</h1>
+
+    <p>{{post.content}}</p>
+    {% endfor %}
   </body>
 </html>
