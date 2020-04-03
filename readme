@@ -1,0 +1,25 @@
+
+
+>made virtual env
+mkvirtualenv apr03
+
+
+> installed django
+pip install django
+
+
+>
+django-admin startproject myproject .
+
+>
+python manage.py runserver
+
+>
+python manage.py startapp blog
+
+>****
+for rendering url path ,u dont need to add app in installed apps
+
+>****
+if u add ur app in installed-apps ur templates work !
+
