@@ -1,23 +1,23 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
+from .models import Post
 
+# posts = [
 
-posts = [
-
-    {
-        'title': 'post1',
-        'content': 'i am from african maldives in south east'
-    },
-    {
-        'title': 'post2',
-        'content': 'i am from turkey'
-    },
-    {
-        'title': 'post3',
-        'content': 'i am running towards east'
-    },
-]
+#     {
+#         'title': 'post1',
+#         'content': 'i am from african maldives in south east'
+#     },
+#     {
+#         'title': 'post2',
+#         'content': 'i am from turkey'
+#     },
+#     {
+#         'title': 'post3',
+#         'content': 'i am running towards east'
+#     },
+# ]
 
 
 def home(request):
@@ -26,10 +26,10 @@ def home(request):
 
 def index(request):
 
-    context1 = {
-        'posts': posts
+    context = {
+        'posts': Post.objects.all()
     }
-    return render(request, 'blog/index.html', context1)
+    return render(request, 'blog/index.html', context)
 
 
 def about(request):

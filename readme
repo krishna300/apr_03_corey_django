@@ -1,9 +1,22 @@
 
 
+>>
+this subbranch is mainly about my custom css templates
+
 
 >
-we altered index.html to display  static posts in template
+we work  base.html extends....
 
 >
-used about page to show 'title' functionality in template
+built custom html css styles
+
+
+
+>>>>>
+auto_now
+>changes at whenever modified
+
+
+auto_now_add
+>fixed at when object created- cant change again
 

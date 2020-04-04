@@ -1,0 +1,51 @@
+<!-- ------------------ -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Home</title> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'blog/style.css' %}"
+    />
+
+    {% if title %}
+    <title>{{title}} -Django blog</title>
+
+    {% else %}
+    <title>Django-Blog</title>
+
+    {% endif %}
+  </head>
+  <body>
+    <div class="nav">
+      <div class="container">
+        <h1 class="logo"><a href={% url 'blog-home' %}>Django Blog  </a></h1>
+
+        <ul>
+          <li><a href={% url 'blog-home' %}>Home</a></li>
+          <li><a href={% url 'blog-about' %}>About</a></li>
+          <li><a>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+    <div class="sidebar">
+      <h1>Our Sidebar</h1>
+      <ul>
+        <li>Comments</li>
+        <li>Links</li>
+        <li>Archives</li>
+        <li>Shortcuts</li>
+      </ul>
+    </div>
+  </body>
+</html>
